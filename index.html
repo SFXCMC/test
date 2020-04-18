@@ -46,15 +46,19 @@
     </footer>
     <script src="https://sfxcmc.github.io/js/tracker.js"></script>
     <script>
+        /**
+         *Cursor effect
+         *Left click the mouse and there will have a math symbol show up
+        **/
         var a_idx = 0;
         jQuery(document).ready(function ($) {
             $("body").click(function (e) {
-                let s1 = '\u221D';
-                let s2 = '\u221E';
-                let s3 = '\u2211';
-                let s4 = '\u2234';
-                let s5 = '\u2235';
-                let s6 = '\u03B8';
+                let s1 = '\u221D'; //'∝' PROPORTIONAL TO
+                let s2 = '\u221E'; //'∞' INFINITY
+                let s3 = '\u2211'; //'∑' SUMMATION
+                let s4 = '\u2234'; //'∴' THEREFORE
+                let s5 = '\u2235'; //'∵' BECAUSE
+                let s6 = '\u03B8'; //'θ' THETA
                 var a = new Array(s1, s2, s3, s4, s5, s6);
                 var $i = $("<span/>").text(a[a_idx]);
                 a_idx = (a_idx + 1) % a.length;
